@@ -21,8 +21,10 @@ except OverflowError, e:
 	print('ERROR: Your number(s) are too large')
 	exit()
 
+#use original formula when a!=o
 if a!=0:
 	denom1=(2*a)
+	#handle complex solutions
 	if sqrtval<0:
 		sqrtval=-1*(sqrtval)
 		print('Root 1: ('+repr(-1*b)+'+ sqrt('+repr(sqrtval)+') i)/'+'('+repr(denom1)+')')
@@ -52,6 +54,7 @@ if a!=0:
 else:
 	num3=(2*c)
 	denom3=((-1*b)-(math.sqrt(sqrtval)))
+	#handle complex solutions
 	if sqrtval<0:
 		sqrtval=-1*(sqrtval)
 		print('Root 1: ('+repr(num3)+')/'+'('+repr(-1*b)+' + sqrt('+repr(sqrtval)+')i')
@@ -68,7 +71,6 @@ else:
 	denom4=((-1*b)+(math.sqrt(sqrtval)))
 	if denom4!=0:
 		root2=num4/denom4
-		print('here7')
 		print('Root 2: '+repr(root2)+i_val)
 
 	else:
