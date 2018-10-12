@@ -20,13 +20,16 @@ try:
 except OverflowError, e:
 	print('ERROR: Your number(s) are too large')
 	exit()
-if sqrtval<0:
-	i_val='i'
-	sqrtval=-1*(sqrtval)
 
 if a!=0:
-	num1=((-1*b)-(math.sqrt(sqrtval)))
 	denom1=(2*a)
+	if sqrtval<0:
+		sqrtval=-1*(sqrtval)
+		print('Root 1: ('+repr(-1*b)+'+ sqrt('+repr(sqrtval)+') i)/'+'('+repr(denom1)+')')
+		print('Root 2: ('+repr(-1*b)+'- sqrt('+repr(sqrtval)+') i)/'+'('+repr(denom1)+')')
+		exit()
+
+	num1=((-1*b)-(math.sqrt(sqrtval)))
 	if denom1!=0:
 		root1=num1/denom1
 		print('Root 1: '+repr(root1)+i_val)
@@ -49,6 +52,12 @@ if a!=0:
 else:
 	num3=(2*c)
 	denom3=((-1*b)-(math.sqrt(sqrtval)))
+	if sqrtval<0:
+		sqrtval=-1*(sqrtval)
+		print('Root 1: ('+repr(num3)+')/'+'('+repr(-1*b)+' + sqrt('+repr(sqrtval)+')i')
+		print('Root 1: ('+repr(num3)+')/'+'('+repr(-1*b)+' - sqrt('+repr(sqrtval)+')i')
+		exit()
+
 	if denom3!=0:
 		root1=num3/denom3
 		print('Root 1: '+repr(root1)+i_val)
