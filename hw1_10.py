@@ -7,15 +7,35 @@ c=input("Enter value for c: ")
 print("")
 print("******* Solutions *********")
 if b>=0:
-	root1=((-1*b)-(math.sqrt(math.pow(b,2)-4*a*c)))/(2*a)
-	print('Root 1: '+repr(root1))
+	num=((-1*b)-(math.sqrt(math.pow(b,2)-4*a*c)))
+	denom=(2*a)
+	if denom!=0:
+		root1=num/denom
+		print('Root 1: '+repr(root1))
+	else:
+		print("Root 1- ERROR: can't divide by 0")
 
-	root2=(2*c)/((-1*b)+(math.sqrt(math.pow(b,2)-4*a*c)))
-	print('Root 2: '+repr(root2))
+	num=(2*c)
+	denom= ((-1*b)+(math.sqrt((math.pow(b,2))-4*a*c)))
+	
+	if denom!=0:
+		root2=num/denom
+		print('Root 2: '+repr(root2))
+	else:
+		print("Root 2- ERROR: can't divide by 0")
 
 if b<0:
-	root1=(2*c)/((-1*b)-(math.sqrt(math.pow(b,2)-4*a*c)))
-	print('Root 1: '+repr(root1))
+	num=(2*c)
+	denom=((-1*b)-(math.sqrt(math.pow(b,2)-4*a*c)))
+	if denom!=0:
+		root1=num/denom
+		print('Root 1: '+repr(root1))
 
-	root2=((-1*b)+(math.sqrt(math.pow(b,2)-4*a*c)))/(2*a)
-	print('Root 2: '+repr(root2))
+	num=((-1*b)+(math.sqrt(math.pow(b,2)-4*a*c)))
+	denom=(2*a)
+	if denom!=0:
+		root2=num/denom
+		print('Root 2: '+repr(root2))
+	
+	else:
+		print("Root 2- ERROR: can't divide by 0")
